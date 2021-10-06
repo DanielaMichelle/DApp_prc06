@@ -18,6 +18,8 @@ namespace MantenimientoBD_1
         }
         protected void btnGrabar_Click(object sender, EventArgs e)
         {
+            // Aborda si los valores ingresados no son válidos
+            if (!this.IsValid) return;
             // instruccion SQL
             string insertSQL = "INSERT INTO clientes VALUES(" + 
                 txtCodigo.Text + ", '" + txtNombres.Text + "', '" + 
